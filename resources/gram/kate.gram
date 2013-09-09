@@ -1,0 +1,27 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for kate bot
+ */
+
+grammar kate;
+
+public <greet> = [Good morning | Hello | Hey | Hi] Kate <action> ;
+
+<action> = <email> | <order> | <report> | <skype>;
+
+<email> = Email To <person> <subject>;
+
+<subject> = Morning | Night;
+
+<order> = Order  <food>;
+
+<food> = Pizza | Burger | Lasagna | Mexican;
+
+<report> = Report <reportable> to office's chat;
+
+<reportable> = Time | Morning | Bye;
+
+<skype> = Call <person>;
+
+<person> = Juan | Mama | Eve;
